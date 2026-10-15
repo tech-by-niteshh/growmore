@@ -1,0 +1,20 @@
+{
+  "name": "GrowMore — Smart Growth & Investment",
+  "short_name": "GrowMore",
+  "start_url": "app.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#060814",
+  "theme_color": "#060814",
+  "description": "High-yield automated fintech platform and investment companion.",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    {
+      "src": "Money Grow Fintech App Showcase-1.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

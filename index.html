@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowMore — Small Investment. Big Returns. | Live Fintech Platform</title>
+  <meta name="description" content="GrowMore is a next-generation platform that helps you multiply your money through smart and secure investment plans. Start with just ₹1 and watch your balance grow up to 140% in 7 days.">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#060814">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+    <div class="glow-3"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-logo">
+        <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="12" fill="url(#logo_bg)"/>
+          <path d="M12 28L18 22L24 26L32 14" stroke="url(#logo_line)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 14H32V20" stroke="url(#logo_line)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="11" y="29" width="4" height="6" rx="2" fill="#8b5cf6"/>
+          <rect x="17" y="24" width="4" height="11" rx="2" fill="#00d2ff"/>
+          <rect x="23" y="28" width="4" height="7" rx="2" fill="#3b82f6"/>
+          <rect x="29" y="16" width="4" height="19" rx="2" fill="#00e676"/>
+          <defs>
+            <linearGradient id="logo_bg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0e172e"/>
+              <stop offset="1" stop-color="#080c1a"/>
+            </linearGradient>
+            <linearGradient id="logo_line" x1="12" y1="28" x2="32" y2="14" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00d2ff"/>
+              <stop offset="1" stop-color="#00e676"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Grow<span>More</span></span>
+          <span class="brand-tagline">Your Money. Our Growth.</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#calculator">Calculator</a></li>
+          <li><a href="#plans">Investment Plans</a></li>
+          <li><a href="#dashboard-preview">Live Dashboard</a></li>
+          <li><a href="#app-showcase">Mobile App</a></li>
+          <li><a href="#download">Download App</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="app.html" target="_blank" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          Open App Demo
+        </a>
+        <button class="btn btn-glass btn-sm" onclick="growEngine.openModal('authModal')">Login</button>
+        <button class="btn btn-primary btn-sm" onclick="growEngine.openModal('authModal')">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live Ticker Strip (Real-time Payouts & Deposits) -->
+  <div class="live-ticker-strip">
+    <div class="ticker-track" id="liveActivityTrack">
+      <div class="ticker-item"><span class="ticker-dot"></span> <strong>Rahul S.</strong> invested ₹ 1,000 in Starter Plan</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> <strong>Priya M.</strong> withdrew ₹ 2,400 to UPI (PhonePe)</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> <strong>Amit Kumar</strong> received ₹ 560 Referral Commission</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> <strong>Vikas R.</strong> auto-credited ₹ 140 Daily Profit</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> <strong>Sneha Verma</strong> invested ₹ 5,000 in Gold Plan</div>
+      <div class="ticker-item"><span class="ticker-dot"></span> <strong>Kunal S.</strong> withdrew ₹ 10,000 Instant Bank Payout</div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="badge-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Trusted • Secure • Transparent
+        </div>
+        <h1>Small Investment.<br><span class="purple">Big Returns.</span></h1>
+        <p class="hero-subtitle">
+          GrowMore is a next-generation platform that helps you increase your money through smart and secure investment plans. Start with just ₹1 and watch your balance grow over time.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-lg" onclick="growEngine.openModal('investModal')">
+            Start Now
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-outline btn-lg" onclick="growEngine.openModal('videoModal')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Video
+          </button>
+        </div>
+
+        <div class="hero-trust-badges">
+          <div class="trust-item">
+            <div class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div class="trust-text">Trusted<br>Platform</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="trust-text">SSL<br>Encrypted</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="trust-text">24/7<br>Support</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div class="trust-text">Instant<br>Access</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Phone Showcase (Interactive Live Demo) -->
+      <div class="phone-mockup-wrapper">
+        <div class="phone-mockup">
+          <div class="phone-notch">
+            <div class="notch-camera"></div>
+            <div class="notch-speaker"></div>
+          </div>
+          <iframe src="app.html" style="width:100%; height:100%; border:none; border-radius:42px; background:#080d1e; z-index:10;" title="GrowMore Live Mobile App Demo"></iframe>
+        </div>
+      </div>
+
+      <!-- Right Feature Card (Matching GrowMore Design) -->
+      <div class="hero-right-card">
+        <div>
+          <span class="badge-green" style="font-size:11px; padding:4px 10px; border-radius:12px; font-weight:700;">HIGH YIELD</span>
+          <h3 style="font-size:24px; font-weight:800; color:#fff; margin-top:8px;">Your Money Grows Faster Here</h3>
+          <p style="font-size:13px; color:var(--text-secondary); margin-top:4px;">
+            Invest today and get up to 140% returns in just 7 days with daily automated credit.
+          </p>
+        </div>
+
+        <!-- Multiplier Highlight Banner -->
+        <div class="return-multiplier-banner">
+          <div class="multiplier-numbers">
+            <span>₹ 1</span>
+            <span class="arrow">➔</span>
+            <span class="tag">₹ 2.40</span>
+          </div>
+          <div class="multiplier-sub">(140% Total Return in 7 Days)</div>
+        </div>
+
+        <div class="hero-features-list">
+          <div class="feature-bullet">
+            <div class="feature-bullet-icon">✓</div>
+            <span>Flexible Plans from ₹1 to ₹50,000</span>
+          </div>
+          <div class="feature-bullet">
+            <div class="feature-bullet-icon">✓</div>
+            <span>Daily Profit Auto-Credited to Wallet</span>
+          </div>
+          <div class="feature-bullet">
+            <div class="feature-bullet-icon">✓</div>
+            <span>Instant Withdrawals to any UPI / Bank</span>
+          </div>
+          <div class="feature-bullet">
+            <div class="feature-bullet-icon">✓</div>
+            <span>10% Referral Bonus on Every Friend</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" onclick="growEngine.openModal('investModal')" style="width:100%;">
+          Invest Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Profit Calculator Section (From RoyalGrow & GrowMore) -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PROFIT CALCULATOR</span>
+        <h2 class="section-title">See Your Potential Earnings</h2>
+        <p class="section-desc">Choose your investment amount and see how much guaranteed profit you generate in real-time.</p>
+      </div>
+
+      <div class="calc-card">
+        <!-- Input Area -->
+        <div class="calc-input-area">
+          <div class="calc-input-group">
+            <label for="calcAmountInput">Enter Investment Amount (₹)</label>
+            <div class="calc-amount-box">
+              <span class="currency">₹</span>
+              <input type="number" id="calcAmountInput" class="calc-input" value="1000" min="1" max="100000" step="1">
+            </div>
+          </div>
+
+          <!-- Quick Chips -->
+          <div class="calc-quick-chips">
+            <button class="chip-btn calc-chip" data-amount="1">₹ 1</button>
+            <button class="chip-btn calc-chip" data-amount="10">₹ 10</button>
+            <button class="chip-btn calc-chip" data-amount="100">₹ 100</button>
+            <button class="chip-btn calc-chip" data-amount="500">₹ 500</button>
+            <button class="chip-btn calc-chip active" data-amount="1000">₹ 1,000</button>
+            <button class="chip-btn calc-chip" data-amount="5000">₹ 5,000</button>
+            <button class="chip-btn calc-chip" data-amount="10000">₹ 10,000</button>
+          </div>
+
+          <input type="range" id="calcAmountSlider" class="calc-slider" value="1000" min="1" max="25000" step="50">
+
+          <div style="margin-top:16px;">
+            <label style="font-size:13px; font-weight:600; color:var(--text-secondary); display:block; margin-bottom:8px;">Plan Duration</label>
+            <div class="calc-duration-options">
+              <button class="duration-btn active" data-days="7">7 Days (140% Return)</button>
+              <button class="duration-btn" data-days="10">10 Days (160% Return)</button>
+              <button class="duration-btn" data-days="14">14 Days (200% Return)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div class="calc-result-box">
+          <div class="calc-result-label">Total Expected Return</div>
+          <div class="calc-result-val" id="calcTotalReturnVal">₹ 2,400.00</div>
+          <div class="calc-result-badge">+140% Net Profit Guarantee</div>
+
+          <div class="calc-breakdown">
+            <div class="breakdown-item">
+              <span class="title">Net Profit</span>
+              <span class="val" id="calcProfitVal" style="color:var(--accent-green);">+ ₹ 1,400.00</span>
+            </div>
+            <div class="breakdown-item">
+              <span class="title">Daily Yield</span>
+              <span class="val" id="calcDailyVal">₹ 200.00</span>
+            </div>
+          </div>
+
+          <button class="btn btn-green btn-lg" onclick="growEngine.openModal('investModal')" style="width:100%;">
+            Start Earning Now
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section (4 Steps) -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SIMPLE PROCESS</span>
+        <h2 class="section-title">How It Works?</h2>
+        <p class="section-desc">Follow 4 straightforward steps to grow your funds with peace of mind.</p>
+      </div>
+
+      <div class="how-it-works-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Register</h3>
+          <p class="step-desc">Create your free verified account with mobile number and password in under 60 seconds.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Deposit Funds</h3>
+          <p class="step-desc">Add funds starting from just ₹1 using any UPI app (GPay, PhonePe, Paytm) or NetBanking.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Grow Automatically</h3>
+          <p class="step-desc">Our automated algorithms work for you, distributing returns up to 140% in 7 days directly to your dashboard.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Instant Withdraw</h3>
+          <p class="step-desc">Withdraw your original capital + profits anytime directly to your UPI ID or Bank account.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Plans Section -->
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FLEXIBLE CHOICES</span>
+        <h2 class="section-title">Choose Your Investment Plan</h2>
+        <p class="section-desc">From micro plans starting at ₹1 to premium high-yield VIP tiers.</p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card">
+          <span class="plan-badge-top">MICRO PLAN</span>
+          <div class="plan-icon-wrap" style="color:var(--accent-green);">🌱</div>
+          <h3 class="plan-name">₹1 Starter Plan</h3>
+          <div class="plan-deposit-amt">₹ 1.00</div>
+          <div class="plan-stats-box">
+            <div class="plan-stat-row"><span class="label">Daily Return:</span><span class="val green">₹ 0.20</span></div>
+            <div class="plan-stat-row"><span class="label">Duration:</span><span class="val">7 Days</span></div>
+            <div class="plan-stat-row"><span class="label">Total Payout:</span><span class="val green">₹ 2.40 (140%)</span></div>
+          </div>
+          <button class="btn btn-green btn-sm" onclick="growEngine.investInPlan('₹1 Starter Plan', 1, 2.4, 7)">Invest ₹1 Now</button>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan-card">
+          <span class="plan-badge-top">POPULAR</span>
+          <div class="plan-icon-wrap" style="color:var(--accent-cyan);">⚡</div>
+          <h3 class="plan-name">₹10 Booster Plan</h3>
+          <div class="plan-deposit-amt">₹ 10.00</div>
+          <div class="plan-stats-box">
+            <div class="plan-stat-row"><span class="label">Daily Return:</span><span class="val green">₹ 2.00</span></div>
+            <div class="plan-stat-row"><span class="label">Duration:</span><span class="val">7 Days</span></div>
+            <div class="plan-stat-row"><span class="label">Total Payout:</span><span class="val green">₹ 24.00 (140%)</span></div>
+          </div>
+          <button class="btn btn-green btn-sm" onclick="growEngine.investInPlan('₹10 Booster Plan', 10, 2.4, 7)">Invest ₹10 Now</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card featured">
+          <span class="plan-badge-top" style="background:rgba(0,210,255,0.2); color:var(--accent-cyan); border-color:var(--accent-cyan);">BEST VALUE</span>
+          <div class="plan-icon-wrap" style="color:var(--accent-cyan);">💎</div>
+          <h3 class="plan-name">₹1,000 Growth Plan</h3>
+          <div class="plan-deposit-amt">₹ 1,000.00</div>
+          <div class="plan-stats-box">
+            <div class="plan-stat-row"><span class="label">Daily Return:</span><span class="val green">₹ 200.00</span></div>
+            <div class="plan-stat-row"><span class="label">Duration:</span><span class="val">7 Days</span></div>
+            <div class="plan-stat-row"><span class="label">Total Payout:</span><span class="val green">₹ 2,400.00 (140%)</span></div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="growEngine.investInPlan('₹1,000 Growth Plan', 1000, 2.4, 7)">Invest ₹1,000 Now</button>
+        </div>
+
+        <!-- Plan 4 -->
+        <div class="plan-card">
+          <span class="plan-badge-top" style="background:rgba(245,158,11,0.2); color:#f59e0b; border-color:#f59e0b;">VIP TIER</span>
+          <div class="plan-icon-wrap" style="color:#f59e0b;">👑</div>
+          <h3 class="plan-name">₹5,000 VIP Plan</h3>
+          <div class="plan-deposit-amt">₹ 5,000.00</div>
+          <div class="plan-stats-box">
+            <div class="plan-stat-row"><span class="label">Daily Return:</span><span class="val green">₹ 1,071.00</span></div>
+            <div class="plan-stat-row"><span class="label">Duration:</span><span class="val">7 Days</span></div>
+            <div class="plan-stat-row"><span class="label">Total Payout:</span><span class="val green">₹ 7,500.00 (150%)</span></div>
+          </div>
+          <button class="btn btn-green btn-sm" onclick="growEngine.investInPlan('₹5,000 VIP Plan', 5000, 2.5, 7)">Invest ₹5,000 Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Web Dashboard Showcase (Exact layout of lower half of GrowMore image) -->
+  <section class="section dashboard-showcase-section" id="dashboard-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">LIVE DEMO EXPERIENCE</span>
+        <h2 class="section-title">GrowMore Web Dashboard Interface</h2>
+        <p class="section-desc">Experience the full interactive client portal. Deposit, invest, withdraw, and track real growth in real-time.</p>
+      </div>
+
+      <div class="dashboard-app-frame">
+        <!-- Sidebar Navigation -->
+        <aside class="dash-sidebar">
+          <div class="brand-logo" style="margin-bottom:8px;">
+            <svg class="logo-icon-svg" style="width:28px; height:28px;" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="10" fill="#00d2ff"/><path d="M12 28L18 22L24 26L32 14" stroke="#000" stroke-width="4" stroke-linecap="round"/></svg>
+            <span class="brand-name" style="font-size:18px;">Grow<span>More</span></span>
+          </div>
+
+          <div class="user-mini-profile">
+            <div class="user-avatar">RS</div>
+            <div class="user-info-text">
+              <div class="name">Rahul Sharma</div>
+              <div class="id">ID: GM12345</div>
+              <span class="verified-pill">✓ Verified</span>
+            </div>
+          </div>
+
+          <ul class="dash-menu">
+            <li><a class="dash-menu-item active">📊 Dashboard</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.openModal('investModal')">💼 Invest</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.showToast('My Earnings: ₹ 3,240.00 earned till date', 'success')">📈 My Earnings</a></li>
+            <li><a class="dash-menu-item" onclick="document.querySelector('#referralSection').scrollIntoView({behavior:'smooth'})">👥 Referral</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.openModal('withdrawModal')">📤 Withdraw</a></li>
+            <li><a class="dash-menu-item" onclick="document.querySelector('#dashTxTableBody').scrollIntoView({behavior:'smooth'})">📜 Transaction History</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.openModal('profileModal')">👤 Profile</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.showToast('Security & Settings are active', 'info')">⚙️ Settings</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.showToast('24/7 Live Support Connected', 'info')">🎧 Support</a></li>
+            <li><a class="dash-menu-item" onclick="growEngine.resetState()" style="color:#ef4444;">🔄 Reset Demo</a></li>
+          </ul>
+        </aside>
+
+        <!-- Center Main Content -->
+        <main class="dash-main">
+          <!-- Top Bar -->
+          <div class="dash-top-bar">
+            <div class="dash-greeting">
+              <h2>Dashboard</h2>
+              <p>Good Morning, Rahul 👋 (Live System Status: Optimal)</p>
+            </div>
+            <div class="dash-quick-btns">
+              <button class="btn btn-green btn-sm" onclick="growEngine.openModal('depositModal')">+ Deposit</button>
+              <button class="btn btn-outline btn-sm" onclick="growEngine.openModal('withdrawModal')">Withdraw</button>
+            </div>
+          </div>
+
+          <!-- Stats 4-Grid -->
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="header-row">
+                <span style="font-size:12px; color:var(--text-secondary);">Total Balance</span>
+                <span class="icon-chip" style="background:rgba(0,210,255,0.15); color:var(--accent-cyan);">💳</span>
+              </div>
+              <div class="val user-balance-val">₹ 12,480.00</div>
+              <div class="trend up">↑ 12.5%</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="header-row">
+                <span style="font-size:12px; color:var(--text-secondary);">Total Earnings</span>
+                <span class="icon-chip" style="background:rgba(0,230,118,0.15); color:var(--accent-green);">📈</span>
+              </div>
+              <div class="val user-earnings-val">₹ 3,240.00</div>
+              <div class="trend up">↑ 140%</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="header-row">
+                <span style="font-size:12px; color:var(--text-secondary);">Active Investments</span>
+                <span class="icon-chip" style="background:rgba(139,92,246,0.15); color:var(--accent-purple);">💼</span>
+              </div>
+              <div class="val user-invested-val">₹ 8,000.00</div>
+              <span style="font-size:11px; color:var(--text-muted);">2 Active Plans</span>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="header-row">
+                <span style="font-size:12px; color:var(--text-secondary);">Referral Bonus</span>
+                <span class="icon-chip" style="background:rgba(245,158,11,0.15); color:#f59e0b);">🎁</span>
+              </div>
+              <div class="val user-referral-val">₹ 560.00</div>
+              <span style="font-size:11px; color:var(--accent-green);">12 Referrals</span>
+            </div>
+          </div>
+
+          <!-- Active Investment Plans Card -->
+          <div class="active-plan-banner">
+            <div class="active-plan-header">
+              <div class="active-plan-details">
+                <div class="active-plan-icon">₹</div>
+                <div class="active-plan-info">
+                  <h4 class="active-plan-amt">₹ 1,000.00</h4>
+                  <p class="active-plan-return-rate">140% Return in 7 Days</p>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="growEngine.openModal('investModal')">+ Invest More</button>
+            </div>
+
+            <div class="progress-container">
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill active-plan-progress-fill" style="width:68%;"></div>
+              </div>
+              <div class="progress-meta">
+                <span class="active-plan-maturity">Maturity: 15 Apr 2025</span>
+                <span class="active-plan-progress-percent">68%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Transactions Card -->
+          <div class="recent-tx-card">
+            <div class="tx-header-row">
+              <h4 style="font-size:15px; font-weight:700; color:#fff;">Recent Transactions</h4>
+              <span style="font-size:12px; color:var(--accent-cyan); cursor:pointer;" onclick="growEngine.showToast('Showing all recent ledger activities', 'info')">View All</span>
+            </div>
+            <table class="tx-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type & Details</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="dashTxTableBody">
+                <!-- Dynamically populated by engine -->
+              </tbody>
+            </table>
+          </div>
+        </main>
+
+        <!-- Right Side Column (Profile & Referral Program) -->
+        <aside class="dash-right-col" id="referralSection">
+          <!-- User Profile Details -->
+          <div class="side-panel-card">
+            <h4><span style="color:var(--accent-cyan);">👤</span> Account Details</h4>
+            <div style="font-size:12px; color:var(--text-secondary); display:flex; flex-direction:column; gap:8px;">
+              <div><strong style="color:#fff;">Email:</strong> rahul@gmail.com</div>
+              <div><strong style="color:#fff;">Phone:</strong> +91 98765 43210</div>
+              <div><strong style="color:#fff;">Bank Account:</strong> ••••• 1234 <span style="color:var(--accent-cyan); cursor:pointer; font-size:11px;" onclick="growEngine.showToast('Bank details verified with NPCI', 'info')">[Change]</span></div>
+            </div>
+          </div>
+
+          <!-- Referral Program Widget -->
+          <div class="side-panel-card">
+            <h4><span style="color:var(--accent-purple);">👥</span> Referral Program</h4>
+            <p style="font-size:12px; color:var(--text-secondary);">Invite your friends and earn up to 10% instant lifetime bonus on their deposits.</p>
+
+            <span style="font-size:11px; color:#cbd5e1; font-weight:600;">Your Referral Link:</span>
+            <div class="ref-link-box">
+              <input type="text" class="ref-link-input" value="https://growmore.in/r/GM12345" readonly>
+              <button class="ref-copy-btn" onclick="growEngine.copyReferralLink()">Copy</button>
+            </div>
+
+            <div class="ref-stats-2col">
+              <div class="ref-stat-box">
+                <span class="title">Total Invites</span>
+                <div class="num user-invites-count">12</div>
+              </div>
+              <div class="ref-stat-box">
+                <span class="title">Total Earnings</span>
+                <div class="num" style="color:var(--accent-green);">₹ 2,400</div>
+              </div>
+            </div>
+
+            <div style="background:linear-gradient(135deg, rgba(139,92,246,0.15) 0%, rgba(0,210,255,0.1) 100%); border:1px solid rgba(139,92,246,0.3); border-radius:12px; padding:12px; text-align:center;">
+              <span style="font-size:12px; color:#fff; font-weight:700;">🎁 Earn 10% on every deposit!</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile App Showcase (Green Theme Layout in GrowMore Theme) -->
+  <section class="section" id="app-showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">MOBILE COMPANION</span>
+        <h2 class="section-title">GrowMore Mobile App Experience</h2>
+        <p class="section-desc">Carry your wealth engine in your pocket. Fast, secure, and always accessible.</p>
+      </div>
+
+      <div style="text-align:center; margin-bottom:30px;">
+        <a href="app.html" target="_blank" class="btn btn-green btn-lg">
+          Launch Fullscreen Mobile App
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download App Section -->
+  <section class="section download-section" id="download">
+    <div class="container">
+      <div class="download-banner-card">
+        <div class="download-content">
+          <span class="badge-pill badge-green" style="margin-bottom:14px;">AVAILABLE ON ALL DEVICES</span>
+          <h2>Download Our App &<br>Start Earning Today!</h2>
+          <p>
+            Get full access to your portfolio, real-time yield distribution alerts, and 1-click withdrawals wherever you go.
+          </p>
+
+          <div class="download-buttons-group">
+            <!-- Google Play Button -->
+            <a href="downloads/growmore.apk" download="growmore.apk" class="store-badge-btn" onclick="growEngine.showToast('Starting Android APK download...', 'success')">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8L13.7 12 3.6 22.2c-.4-.4-.6-.9-.6-1.5V3.3c0-.6.2-1.1.6-1.5zm11.5 11.5L4.8 2.5c.3-.1.6-.2 1-.2.6 0 1.2.3 1.6.7l9.7 5.5-2 4.8zm0 1.4l2 4.8-9.7 5.5c-.4.4-1 .7-1.6.7-.4 0-.7-.1-1-.2l10.3-10.8zm1.8-1.8l3.6 2.1c1 .6 1.6 1.6 1.6 2.8s-.6 2.2-1.6 2.8l-3.6 2.1-2.4-5 2.4-4.8z"/></svg>
+              <div class="store-badge-text">
+                <span class="subtitle">GET IT ON</span>
+                <span class="title">Google Play / APK</span>
+              </div>
+            </a>
+
+            <!-- App Store Button -->
+            <a href="app.html" target="_blank" class="store-badge-btn" onclick="growEngine.showToast('Launching iOS Safari Web App', 'info')">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.7 19.5c-.8 1.2-1.7 2.4-3 2.5-1.4.1-1.8-.8-3.4-.8-1.5 0-2 .8-3.4.8-1.3 0-2.3-1.3-3.1-2.5-1.7-2.5-3-7-1.2-10 1-.9 2-1.4 3.3-1.4 1.3 0 2.2.8 3 .8.8 0 2.1-.9 3.5-.8 1.4.1 2.5.6 3.2 1.7-2.8 1.7-2.4 5.4.4 6.7-.7 1.4-1.6 2.8-2.7 4.2zM15.5 6.4c.6-.8 1.1-1.9 1-3-.9.1-2.1.6-2.7 1.4-.6.7-1.1 1.8-.9 2.9 1.1.1 2-.5 2.6-1.3z"/></svg>
+              <div class="store-badge-text">
+                <span class="subtitle">DOWNLOAD ON THE</span>
+                <span class="title">App Store</span>
+              </div>
+            </a>
+
+            <!-- Direct APK Download Button -->
+            <a href="downloads/growmore.apk" download="growmore.apk" class="btn btn-green" style="padding:12px 24px;" onclick="growEngine.showToast('Downloading GrowMore Native APK...', 'success')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download APK Direct
+            </a>
+
+            <!-- Standalone Offline Package -->
+            <a href="downloads/growmore-app.zip" download="growmore-app.zip" class="btn btn-outline" style="padding:12px 24px;" onclick="growEngine.showToast('Downloading Offline ZIP Package...', 'info')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+              Download ZIP Demo
+            </a>
+          </div>
+
+          <div class="qr-code-row">
+            <div class="qr-box">
+              <!-- Inline QR Code SVG -->
+              <svg viewBox="0 0 100 100" fill="#000">
+                <rect x="10" y="10" width="25" height="25" fill="#000"/>
+                <rect x="15" y="15" width="15" height="15" fill="#fff"/>
+                <rect x="18" y="18" width="9" height="9" fill="#000"/>
+                <rect x="65" y="10" width="25" height="25" fill="#000"/>
+                <rect x="70" y="15" width="15" height="15" fill="#fff"/>
+                <rect x="73" y="18" width="9" height="9" fill="#000"/>
+                <rect x="10" y="65" width="25" height="25" fill="#000"/>
+                <rect x="15" y="70" width="15" height="15" fill="#fff"/>
+                <rect x="18" y="73" width="9" height="9" fill="#000"/>
+                <rect x="42" y="15" width="8" height="8"/>
+                <rect x="42" y="35" width="8" height="8"/>
+                <rect x="65" y="45" width="8" height="8"/>
+                <rect x="52" y="55" width="8" height="8"/>
+                <rect x="75" y="75" width="8" height="8"/>
+              </svg>
+            </div>
+            <div class="qr-desc">
+              <div class="title">Scan QR Code</div>
+              <div class="sub">Scan with any smartphone camera to open and install the app instantly.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="download-mockup-wrapper">
+          <img src="Money Grow Fintech App Showcase-1.png" alt="GrowMore App" style="width:100%; max-width:380px; border-radius:24px; box-shadow:0 20px 50px rgba(0,0,0,0.8); border:1px solid var(--border-glow);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#04060e; border-top:1px solid var(--border-glass); padding:50px 0 30px;">
+    <div class="container" style="display:flex; flex-direction:column; gap:30px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+        <div class="brand-logo">
+          <svg class="logo-icon-svg" style="width:32px; height:32px;" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="10" fill="#00d2ff"/><path d="M12 28L18 22L24 26L32 14" stroke="#000" stroke-width="4" stroke-linecap="round"/></svg>
+          <div class="brand-text">
+            <span class="brand-name" style="font-size:20px;">Grow<span>More</span></span>
+            <span class="brand-tagline">Your Money. Our Growth.</span>
+          </div>
+        </div>
+        <div style="display:flex; gap:24px; font-size:13px; color:var(--text-secondary);">
+          <a href="#hero" style="color:inherit; text-decoration:none;">About Us</a>
+          <a href="#how-it-works" style="color:inherit; text-decoration:none;">Terms & Conditions</a>
+          <a href="#calculator" style="color:inherit; text-decoration:none;">Privacy Policy</a>
+          <a href="#download" style="color:inherit; text-decoration:none;">Contact Support</a>
+        </div>
+        <div style="display:flex; gap:16px; font-size:18px;">
+          <span>🌐</span><span>📱</span><span>💬</span><span>🔒</span>
+        </div>
+      </div>
+      <div style="text-align:center; font-size:12px; color:var(--text-muted); border-top:1px solid rgba(255,255,255,0.04); padding-top:20px;">
+        © 2026 GrowMore Technologies Inc. All rights reserved. High-yield automated fintech platform.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+
+  <!-- Deposit Modal -->
+  <div class="modal-overlay" id="depositModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="growEngine.closeModal('depositModal')">✕</button>
+      <h3 style="font-size:20px; font-weight:800; color:#fff; margin-bottom:6px;">Instant Deposit Funds</h3>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:20px;">Add funds starting from ₹1 using any UPI or Bank Gateway.</p>
+
+      <div class="form-group">
+        <label>Enter Amount (₹)</label>
+        <input type="number" id="depositAmtInput" class="form-input" value="1000" min="1" step="1">
+      </div>
+
+      <div style="display:flex; gap:8px; margin-bottom:18px;">
+        <button type="button" class="chip-btn" onclick="document.getElementById('depositAmtInput').value=100">+ ₹100</button>
+        <button type="button" class="chip-btn" onclick="document.getElementById('depositAmtInput').value=500">+ ₹500</button>
+        <button type="button" class="chip-btn" onclick="document.getElementById('depositAmtInput').value=1000">+ ₹1,000</button>
+        <button type="button" class="chip-btn" onclick="document.getElementById('depositAmtInput').value=5000">+ ₹5,000</button>
+      </div>
+
+      <div class="form-group">
+        <label>Select Payment Gateway</label>
+        <select id="depositMethodSelect" class="form-input" style="background:#090e1e;">
+          <option value="UPI (PhonePe, Google Pay, Paytm)">UPI (PhonePe / GPay / Paytm)</option>
+          <option value="Bank IMPS/NEFT">Direct NetBanking (IMPS / NEFT)</option>
+          <option value="Wallet">Digital Wallet</option>
+        </select>
+      </div>
+
+      <button class="btn btn-green btn-lg" style="width:100%; margin-top:10px;" onclick="
+        const amt = document.getElementById('depositAmtInput').value;
+        const method = document.getElementById('depositMethodSelect').value;
+        if (growEngine.depositFunds(amt, method)) {
+          growEngine.closeModal('depositModal');
+        }
+      ">
+        Proceed to Pay Securely
+      </button>
+    </div>
+  </div>
+
+  <!-- Withdraw Modal -->
+  <div class="modal-overlay" id="withdrawModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="growEngine.closeModal('withdrawModal')">✕</button>
+      <h3 style="font-size:20px; font-weight:800; color:#fff; margin-bottom:6px;">Withdraw Funds</h3>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+        Available Balance: <strong class="user-balance-val" style="color:var(--accent-green);">₹ 12,480.00</strong>
+      </p>
+
+      <div class="form-group">
+        <label>Enter Amount (Min ₹50)</label>
+        <input type="number" id="withdrawAmtInput" class="form-input" value="500" min="50" step="10">
+      </div>
+
+      <div class="form-group">
+        <label>UPI ID or Bank Account</label>
+        <input type="text" id="withdrawDestInput" class="form-input" value="rahul@okhdfcbank">
+      </div>
+
+      <button class="btn btn-primary btn-lg" style="width:100%; margin-top:10px;" onclick="
+        const amt = document.getElementById('withdrawAmtInput').value;
+        const dest = document.getElementById('withdrawDestInput').value;
+        if (growEngine.withdrawFunds(amt, 'UPI', dest)) {
+          growEngine.closeModal('withdrawModal');
+        }
+      ">
+        Confirm Withdrawal Request
+      </button>
+    </div>
+  </div>
+
+  <!-- Investment Modal -->
+  <div class="modal-overlay" id="investModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="growEngine.closeModal('investModal')">✕</button>
+      <h3 style="font-size:20px; font-weight:800; color:#fff; margin-bottom:6px;">Choose Your Plan</h3>
+      <p style="font-size:13px; color:var(--text-secondary); margin-bottom:16px;">
+        Select an investment plan to start generating daily yield:
+      </p>
+
+      <div class="form-group">
+        <label>Select Plan</label>
+        <select id="modalPlanSelect" class="form-input" style="background:#090e1e;" onchange="
+          const val = this.value;
+          document.getElementById('modalInvestAmt').value = val;
+        ">
+          <option value="1">₹1 Micro Starter (140% in 7 Days)</option>
+          <option value="10">₹10 Booster (140% in 7 Days)</option>
+          <option value="100">₹100 Power (140% in 7 Days)</option>
+          <option value="1000" selected>₹1,000 Growth Pro (140% in 7 Days)</option>
+          <option value="5000">₹5,000 VIP Diamond (150% in 7 Days)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Investment Amount (₹)</label>
+        <input type="number" id="modalInvestAmt" class="form-input" value="1000">
+      </div>
+
+      <div style="background:rgba(0,230,118,0.1); border:1px solid rgba(0,230,118,0.3); border-radius:12px; padding:12px; margin-bottom:18px;">
+        <div style="display:flex; justify-content:space-between; font-size:13px;">
+          <span>Expected Return:</span>
+          <strong style="color:var(--accent-green);">140% - 150% Total Yield</strong>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--text-secondary); margin-top:4px;">
+          <span>Daily Credit:</span>
+          <span>Automated every 24 hours</span>
+        </div>
+      </div>
+
+      <button class="btn btn-green btn-lg" style="width:100%;" onclick="
+        const select = document.getElementById('modalPlanSelect');
+        const planName = select.options[select.selectedIndex].text;
+        const amt = document.getElementById('modalInvestAmt').value;
+        if (growEngine.investInPlan(planName, amt, 2.4, 7)) {
+          growEngine.closeModal('investModal');
+        }
+      ">
+        Activate Investment Plan
+      </button>
+    </div>
+  </div>
+
+  <!-- Auth Modal (Login / Sign Up) -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="growEngine.closeModal('authModal')">✕</button>
+      <div style="display:flex; gap:12px; margin-bottom:20px; border-bottom:1px solid var(--border-glass); padding-bottom:12px;">
+        <button id="authTabLogin" class="btn btn-primary btn-sm" style="flex:1;" onclick="
+          this.className='btn btn-primary btn-sm';
+          document.getElementById('authTabSignup').className='btn btn-outline btn-sm';
+          document.getElementById('authSignupFields').style.display='none';
+          document.getElementById('authSubmitBtn').textContent='Login to Account';
+        ">Login</button>
+        <button id="authTabSignup" class="btn btn-outline btn-sm" style="flex:1;" onclick="
+          this.className='btn btn-primary btn-sm';
+          document.getElementById('authTabLogin').className='btn btn-outline btn-sm';
+          document.getElementById('authSignupFields').style.display='block';
+          document.getElementById('authSubmitBtn').textContent='Create Account';
+        ">Sign Up</button>
+      </div>
+
+      <div class="form-group" id="authSignupFields" style="display:none;">
+        <label>Full Name</label>
+        <input type="text" class="form-input" placeholder="e.g. Rahul Sharma" value="Rahul Sharma">
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" class="form-input" placeholder="+91 98765 43210" value="+91 98765 43210">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-input" value="••••••••">
+      </div>
+
+      <button id="authSubmitBtn" class="btn btn-green btn-lg" style="width:100%; margin-top:10px;" onclick="
+        growEngine.showToast('Authentication Successful! Welcome back, Rahul.', 'success');
+        growEngine.closeModal('authModal');
+      ">
+        Login to Account
+      </button>
+    </div>
+  </div>
+
+  <!-- Video Trailer Modal -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-container" style="max-width:680px; text-align:center;">
+      <button class="modal-close-btn" onclick="growEngine.closeModal('videoModal')">✕</button>
+      <h3 style="font-size:20px; font-weight:800; color:#fff; margin-bottom:12px;">How GrowMore Multiplies Your Capital</h3>
+      <div style="aspect-ratio:16/9; background:#040714; border:1px solid var(--border-glow); border-radius:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px;">
+        <div style="width:68px; height:68px; border-radius:50%; background:linear-gradient(135deg, var(--accent-cyan), var(--accent-green)); display:flex; align-items:center; justify-content:center; color:#000; font-size:26px; box-shadow:0 0 30px rgba(0,210,255,0.6); cursor:pointer;">
+          ▶
+        </div>
+        <p style="font-size:14px; color:#cbd5e1; margin-top:16px; font-weight:600;">GrowMore 2026 Interactive Architecture Overview</p>
+        <span style="font-size:12px; color:var(--text-muted);">Smart Yield Distribution • Transparent Ledger • Instant Payouts</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
